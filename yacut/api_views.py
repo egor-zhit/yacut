@@ -19,7 +19,7 @@ def create_url():
     if 'url' not in data:
         raise InvalidAPIUsage('"url" является обязательным полем!')
     if URLMap.query.filter_by(short=data['custom_id']).first() is not None:
-        raise InvalidAPIUsage(f'Имя {data["custom_id"]} уже занято!')
+        raise InvalidAPIUsage(f'Имя {data["custom_id"]} уже занято.')
     url_map = URLMap(original=data.get('url'), short=data['custom_id'])
     url_map.from_dict(data)
     db.session.add(url_map)
