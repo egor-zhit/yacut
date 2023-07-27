@@ -26,10 +26,10 @@ class URLMap(db.Model):
 
     def to_dict(self):
         return dict(
+            url=self.original,
             short_link=url_for(
                 'redirect_url', short_url=self.short, _external=True
             ),
-            url=self.original
         )
 
     def from_dict(self, data):

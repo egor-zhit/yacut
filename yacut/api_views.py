@@ -24,7 +24,7 @@ def create_url():
     url_map.from_dict(data)
     db.session.add(url_map)
     db.session.commit()
-    return jsonify({'url_map': url_map.to_dict()}), 201
+    return jsonify({url_map.to_dict()}), 201
 
 
 @app.route('/api/id/<short_id>/', methods=['GET'])
