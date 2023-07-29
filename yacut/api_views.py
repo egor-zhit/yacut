@@ -1,6 +1,5 @@
 from http import HTTPStatus
-from flask import request
-from flask import jsonify
+from flask import request, jsonify
 
 from . import app, db
 from .models import URLMap

@@ -1,6 +1,6 @@
+import re
 from datetime import datetime
 from random import choices
-import re
 from string import ascii_letters, digits
 
 from flask import url_for
